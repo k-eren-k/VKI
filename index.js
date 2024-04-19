@@ -8,10 +8,15 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.post('/', async (req, res) => {
-      res.render('main');
+// Body-parser middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Ana sayfa için GET isteği yönlendirmesi
+app.get('/', (req, res) => {
+    res.render('main'); // main.ejs dosyasını işler
 });
 
 app.listen(port, () => {
-  console.log(`VKI ${port} `);
+    console.log(`VKI ${port} `);
 });
