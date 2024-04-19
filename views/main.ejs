@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vücut Kitle İndeksi Hesaplayıcı</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <input type="number" id="weight" step="0.01" required placeholder="Kilo(KG)"><br><br>
+    <input type="number" id="height" step="0.01" required placeholder="Boyunuz(M)"><br><br>
+    <select id="gender" required>
+      <option value="male">Erkek</option>
+      <option value="female">Kadın</option>
+    </select><br><br>
+    <button onclick="calculateBMI()">Hesapla</button><br><br>
+    <div id="result"></div>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>
